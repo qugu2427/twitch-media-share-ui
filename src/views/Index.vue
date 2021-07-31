@@ -59,6 +59,7 @@ export default {
       this.queue.shift();
       this.likes = 0;
       this.dislikes = 0;
+      this.media.duration = Math.ceil(this.media.duration);
     },
     enqueue(media) {
       console.log("enqueue");
