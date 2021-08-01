@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     refresh(secondsElapsed) {
-      media.start = secondsElapsed;
+      this.media.start = secondsElapsed;
     },
   },
   sockets: {
