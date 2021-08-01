@@ -22,16 +22,15 @@
     <v-alert
       outlined
       color="white"
-      icon="mdi-information-outline"
       dense
       style="width: 640px;"
       v-if="showRefreshInfo"
+      class="ma-5"
     >
       <v-row align="center">
-        <v-col class="font-weight-bold grow">
-          If the video is paused, press
+        <v-col class="grow">
+          If the video is paused press
           <v-icon>mdi-refresh</v-icon>
-          .
         </v-col>
         <v-col class="shrink" @click="showRefreshInfo = false">
           <v-btn text>got it</v-btn>
