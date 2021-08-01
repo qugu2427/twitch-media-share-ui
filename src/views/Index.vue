@@ -18,6 +18,27 @@
         </v-col>
       </v-row>
     </v-alert>
+
+    <v-alert
+      outlined
+      color="white"
+      icon="mdi-information-outline"
+      dense
+      style="width: 640px;"
+      v-if="showRefreshInfo"
+    >
+      <v-row align="center">
+        <v-col class="font-weight-bold grow">
+          If the video is paused, press
+          <v-icon>mdi-refresh</v-icon>
+          .
+        </v-col>
+        <v-col class="shrink" @click="showRefreshInfo = false">
+          <v-btn text>got it</v-btn>
+        </v-col>
+      </v-row>
+    </v-alert>
+
     <Player
       :media="media"
       :likes="likes"
@@ -55,6 +76,7 @@ export default {
       dislikes: 0,
       showAlert: false,
       alertMessage: "",
+      showRefreshInfo: true,
     };
   },
   methods: {
