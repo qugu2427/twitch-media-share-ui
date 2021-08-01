@@ -18,12 +18,21 @@
         </v-col>
       </v-row>
     </v-alert>
-    <Player :media="media" :likes="likes" :dislikes="dislikes" />
+    <Player
+      :media="media"
+      :likes="likes"
+      :dislikes="dislikes"
+      @refresh="refresh"
+    />
     <Queue :queue="queue" />
     <Dropdowns />
     <p>
       © 2021 Tencent 腾讯 -
-      <a href="" style="color: white;opacity: 0.5;">Github</a>
+      <a
+        href="https://github.com/qugu2427/twitch-media-share-ui"
+        style="color: white;opacity: 0.5;"
+        >Github</a
+      >
     </p>
   </v-container>
 </template>
@@ -47,6 +56,11 @@ export default {
       showAlert: false,
       alertMessage: "",
     };
+  },
+  methods: {
+    refresh(secondsElapsed) {
+      media.start = secondsElapsed;
+    },
   },
   sockets: {
     connect() {

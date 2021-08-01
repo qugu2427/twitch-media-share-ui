@@ -57,7 +57,7 @@
             {{ overlay ? "mdi-shield-off-outline" : "mdi-shield" }}
           </v-icon>
         </v-btn>
-        <v-btn fab tile text @click="refresh()">
+        <v-btn fab tile text @click="$emit('refresh', secondsElapsed)">
           <v-icon>
             mdi-refresh
           </v-icon>
@@ -108,9 +108,6 @@ export default {
       let fminutes = nhours > 0 && nminutes < 10 ? "0" + nminutes : nminutes;
       let fseconds = nseconds < 10 ? "0" + nseconds : nseconds;
       return `${fhours}${fminutes}:${fseconds}`;
-    },
-    refresh() {
-      alert("coming soon, for now just refresh the browser");
     },
   },
   mounted() {
