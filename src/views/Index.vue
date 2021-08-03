@@ -49,10 +49,18 @@
     <p>
       © 2021 Tencent 腾讯 -
       <a
-        href="https://github.com/qugu2427/twitch-media-share-ui"
+        href="https://github.com/qugu2427/twitch-media-share-api"
         style="color: white;opacity: 0.5;"
         >Github</a
       >
+      -
+      <a
+        href="#"
+        style="color: white;opacity: 0.5;"
+        @click="$socket.client.emit('getConnections')"
+      >
+        Connection Count
+      </a>
     </p>
   </v-container>
 </template>
@@ -113,6 +121,9 @@ export default {
     setVotes(obj) {
       this.likes = obj.likes;
       this.dislikes = obj.dislikes;
+    },
+    connections(count) {
+      alert("Current connection count: " + count);
     },
   },
 };
