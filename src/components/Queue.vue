@@ -3,7 +3,7 @@
     class="ma-5 d-flex flex-column"
     style="width: 640px;max-height: 220px;"
   >
-    <div class="text-button text-truncate pa-3">
+    <div class="text-button pa-3">
       <v-icon left>mdi-tray-full</v-icon>
       queue {{ queue.length }}/25
     </div>
