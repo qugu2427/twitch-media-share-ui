@@ -47,13 +47,12 @@
     <Queue :queue="queue" />
     <Dropdowns />
     <p>
-      © 2021 Tencent 腾讯 -
       <a
         href="https://github.com/qugu2427/twitch-media-share-api"
         style="color: white;opacity: 0.5;"
         >Github</a
       >
-      -
+      —
       <a
         href="#"
         style="color: white;opacity: 0.5;"
